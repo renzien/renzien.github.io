@@ -16,14 +16,15 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-  <nav class="flex flex-space-between flex-align-center">
-    <div class="nav-left flex">
-      <div class="nav-icon"><a href="#home">DARK PHANTASM</a></div>
+
+  <nav>
+    <div class="nav-left">
+      <div class="nav-logo"><a href="#home">DARK PHANTASM</a></div>
     </div>
-    <div class="nav-right flex flex-space-between">
-      <div><a href="#about">ABOUT</a></div>
-      <div><a href="#videos">VIDEOS</a></div>
-      <div><a href="#contact">CONTACT</a></div>
+    <div class="nav-right">
+      <div class="nav-link"><a href="#about">ABOUT</a></div>
+      <div class="nav-link"><a href="#videos">VIDEOS</a></div>
+      <div class="nav-link"><a href="#contact">CONTACT</a></div>
     </div>
   </nav>
 
@@ -44,13 +45,38 @@
 
   <section id="videos">
     <h1>VIDEOS</h1>
-    <h2>Popular Videos</h2>
-    <div class="popular-videos flex flex-space-between">
+
+    <h2>New Release</h2>
+    <div id="new-release" class="card-container">
       
+      <div class="card">
+        <a href="https://youtu.be/23bW6nK07NE" target="_blank">
+          <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
+          <img src="https://img.youtube.com/vi/23bW6nK07NE/maxresdefault.jpg">
+          <div class="card-detail">
+            <h1>【Genshin Impact MMD】ドーナツホール / Donut Hole 【Thoma】</h1>
+          </div>
+        </a>
+      </div>
+      
+      <div class="card">
+        <a href="https://youtu.be/RtNtA72m6pQ" target="_blank">
+          <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
+          <img src="https://img.youtube.com/vi/RtNtA72m6pQ/maxresdefault.jpg">
+          <div class="card-detail">
+            <h1>【MMD Honkai Impact】Passion 【Elysia】</h1>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <h2>Popular Videos</h2>
+    <div id="popular-videos" class="card-container">
+
       <div class="card">
         <a href="https://youtu.be/GUm6qu_A5Ls" target="_blank">
           <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
-          <img src="https://img.youtube.com/vi/GUm6qu_A5Ls/mqdefault.jpg">
+          <img src="https://img.youtube.com/vi/GUm6qu_A5Ls/maxresdefault.jpg">
           <div class="card-detail">
             <h1>【MMD Genshin Impact x Jujutsu Kaisen】Xiao 【LOST IN PARADISE】</h1>
           </div>
@@ -60,7 +86,7 @@
       <div class="card">
         <a href="https://youtu.be/2Ap0q5KvIz0" target="_blank">
           <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
-          <img src="https://img.youtube.com/vi/2Ap0q5KvIz0/mqdefault.jpg">
+          <img src="https://img.youtube.com/vi/2Ap0q5KvIz0/maxresdefault.jpg">
           <div class="card-detail">
             <h1>【Genshin Impact MMD】ニア/Near 【Xiao & Ganyu】</h1>
           </div>
@@ -70,17 +96,36 @@
       <div class="card">
         <a href="https://youtu.be/czto_7GDGbA" target="_blank">
           <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
-          <img src="https://img.youtube.com/vi/czto_7GDGbA/mqdefault.jpg">
+          <img src="https://img.youtube.com/vi/czto_7GDGbA/maxresdefault.jpg">
           <div class="card-detail">
             <h1>【Genshin Impact MMD】極楽浄土 / Gokuraku Joudo【Eula】</h1>
           </div>
         </a>
       </div>
-
     </div>
 
     <h2>All Videos</h2>
-    <div class="flex flex-space-between flex-wrap">
+    <div id="all-videos" class="card-container">
+      
+      <div class="card">
+        <a href="https://youtu.be/23bW6nK07NE" target="_blank">
+          <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
+          <img src="https://img.youtube.com/vi/23bW6nK07NE/mqdefault.jpg">
+          <div class="card-detail">
+            <h1>【Genshin Impact MMD】ドーナツホール / Donut Hole 【Thoma】</h1>
+          </div>
+        </a>
+      </div>
+      
+      <div class="card">
+        <a href="https://youtu.be/RtNtA72m6pQ" target="_blank">
+          <div class="play-button"><i class="fas fa-play fa-2x"></i></div>
+          <img src="https://img.youtube.com/vi/RtNtA72m6pQ/mqdefault.jpg">
+          <div class="card-detail">
+            <h1>【MMD Honkai Impact】Passion 【Elysia】</h1>
+          </div>
+        </a>
+      </div>
       
       <div class="card">
         <a href="https://youtu.be/DfSHEcjY_gQ" target="_blank">
@@ -241,10 +286,8 @@
           </div>
         </a>
       </div>
-
     </div>
   </section>
-
 
   <div class="parallax" style="background-image: url('assets/image/parallax1.jpg');"></div>
 
@@ -257,7 +300,5 @@
     <p><i class="fas fa-code"></i> by AhmadMCer</p>
     <p><i class="fas fa-copyright"></i> belongs to Renzien_</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>

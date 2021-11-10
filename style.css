@@ -21,43 +21,18 @@ body {
 }
 
 
-/* Flex */
-.flex {
-  display: flex;
-}
-
-.flex-center {
-  justify-content: center;
-}
-
-.flex-space-around {
-  justify-content: space-around;
-}
-
-.flex-space-between {
-  justify-content: space-between;
-}
-
-.flex-align-center {
-  align-items: center;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
-}
-
-
 /* Navigation */
 nav {
+  display: flex;
+  justify-content: space-between;
   background-color: inherit;
   font-family: 'Exo', sans-serif;
   font-weight: 700;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 1;
-  width: 100%;
-  height: 3rem;
-  padding: 0 4rem;
+  padding: 8px 64px;
 }
 
 nav a {
@@ -67,21 +42,25 @@ nav a {
 }
 
 nav div > div:hover {
-  border-bottom: .25rem solid var(--white);
-  margin-bottom: -.25rem;
+  border-bottom: 4px solid var(--white);
+  margin-bottom: -4px;
 }
 
-nav .nav-left {
+.nav-left {
+  display: flex;
   width: 25%;
 }
 
-nav .nav-icon > a {
+.nav-logo > a {
   font-size: 1.5em;
   font-weight: 900;
   font-style: italic;
 }
 
-nav .nav-right {
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 25%;
 }
 
@@ -95,45 +74,45 @@ header::before {
   content: "";
   display: block;
   background-color: hsla(0, 0%, 0%, .5);
+  width: 100vw;
+  height: 100vh;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
 }
 
 header::after {
   content: "";
   display: block;
   background-color: var(--black);
+  width: 100vw;
+  height: 128px;
   position: absolute;
   bottom: 0;
-  width: 100%;
-  height: 8rem;
 }
 
 video {
+  width: 100vw;
   position: relative;
   top: 0;
-  width: 100%;
   z-index: -1;
 }
 
-header .header-title {
+.header-title {
   background-image: linear-gradient(var(--trans), var(--black));
-  position: absolute;
-  bottom: 8rem;
   width: 100%;
-  padding: 6rem 0;
+  position: absolute;
+  bottom: 128px;
+  padding: 96px 0;
 }
 
-header h1, header p {
+.header-title h1, .header-title p {
   font-style: italic;
   text-align: center;
   margin: 0;
 }
 
-header h1 {
+.header-title h1 {
   font-family: 'Exo', sans-serif;
   font-size: 4em;
   font-weight: 900;
@@ -142,8 +121,8 @@ header h1 {
 
 /* Section */
 section {
-  margin: 0 4rem 0;
-  padding: 4rem 0 4rem;
+  margin: 0 64px 0;
+  padding: 64px 0 64px;
 }
 
 section h1, section h2 {
@@ -162,10 +141,10 @@ section p {
 
 /* Parallax */
 .parallax {
-  position: relative;
-  background-attachment: fixed;
   background-size: cover;
-  height: 32rem;
+  background-attachment: fixed;
+  height: 100vh;
+  position: relative;
 }
 
 .parallax::before {
@@ -180,23 +159,37 @@ section p {
 }
 
 
+/* Card Container */
+.card-container {
+  display: grid;
+  grid-gap: 32px;
+  margin-bottom: 64px;
+}
+
+#new-release {
+  grid-template-columns: auto auto;
+}
+
+#popular-videos {
+  grid-template-columns: auto auto auto;
+}
+
+#all-videos {
+  grid-template-columns: auto auto auto auto;
+}
+
+
 /* Card */
 .card {
   position: relative;
-  width: 24%;
-  padding: .5rem;
+  padding: 8px;
   border: 1px solid var(--white);
-  margin-bottom: 2rem;
-  transition-duration: .2s;
-}
-
-.popular-videos .card {
-  width: 30%;
+  transition-duration: 200ms;
 }
 
 .card:hover {
-  box-shadow: .5rem .5rem var(--white);
-  margin: -.5rem .5rem 2.5rem -.5rem;
+  box-shadow: 8px 8px var(--white);
+  transform: translate(-8px, -8px);
 }
 
 .card a {
@@ -211,12 +204,12 @@ section p {
 .play-button {
   opacity: 0;
   background-color: hsla(0, 0%, 0%, .75);
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  transition-duration: .2s;
+  transition-duration: 200ms;
 }
 
 .play-button:hover {
