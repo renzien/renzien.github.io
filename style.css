@@ -47,6 +47,10 @@ nav a:hover {
   margin-bottom: -4px;
 }
 
+nav label, nav input {
+  display: none;
+}
+
 .nav-logo > a {
   font-size: 1.5em;
   font-weight: 900;
@@ -54,20 +58,13 @@ nav a:hover {
 }
 
 .nav-menu {
-  width: 25%;
-}
-
-.nav-menu label, .nav-menu input {
-  display: none;
-}
-
-.nav-link {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 320px;
 }
 
-.nav-link a {
+.nav-menu a {
   display: block;
 }
 
@@ -76,19 +73,15 @@ nav a:hover {
     padding: 8px 32px;
   }
 
-  .nav-menu {
-    width: auto;
-  }
-
-  .nav-menu label {
+  nav label {
     display: block;
   }
 
-  .nav-menu input:checked ~ .nav-link {
+  nav input:checked ~ .nav-menu {
     height: 128px;
   }
 
-  .nav-link {
+  .nav-menu {
     flex-flow: column;
     justify-content: space-around;
     background-color: var(--black);
